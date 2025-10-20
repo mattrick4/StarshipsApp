@@ -9,6 +9,7 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 - Client-side Validation: Forms use jQuery Validation for instant feedback.
 - Bootstrap Styling: Modern, responsive UI for all pages.
 - Docker Support: Run the app in a containerized environment with SQLite persistence.
+- Published in Azure: App is hosted on Azure - https://starshipsapp-c6eug4dkcca0etfm.canadacentral-01.azurewebsites.net
 
 ## What’s new
 
@@ -132,9 +133,6 @@ Reseeding (optional)
 - Architecture
   - Optionally refactor to Razor Pages for a page-focused UI, keeping existing behavior.
   - Extract SWAPI calls behind an interface and use `IHttpClientFactory` with a named client.
-
-## What's Next
-
 - Implement AI features
 - Add Authentication
 
@@ -159,4 +157,5 @@ Reseeding (optional)
 
 
 This project is licensed under the MIT License.
+
 
