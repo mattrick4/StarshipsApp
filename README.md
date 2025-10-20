@@ -10,7 +10,7 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 - Bootstrap Styling: Modern, responsive UI for all pages.
 - Docker Support: Run the app in a containerized environment with SQLite persistence.
 
-## Whatís new (since last update)
+## What‚Äôs new
 
 - Robust seeding from SWAPI (https://swapi.dev):
   - Fetches all pages (pagination) with a 10s timeout and a User-Agent header.
@@ -95,7 +95,7 @@ Verification
 - `printenv | grep -i connection` (ensure the setting is present)
 - `ls -l /home/data` (verify `starships.db` exists)
 - App Service > __Log stream__ shows messages like:
-- ìSeeded N starships from SWAPI.î or ìSeeded 3 starships from embedded fallback.î
+- ‚ÄúSeeded N starships from SWAPI.‚Äù or ‚ÄúSeeded 3 starships from embedded fallback.‚Äù
 
 Reseeding (optional)
 - To force reseed, delete the DB file via SSH (`rm /home/data/starships.db`) and Restart.
@@ -148,13 +148,14 @@ Reseeding (optional)
 
 ## Project Structure
 
-- `Controllers/StarshipsController.cs` ñ MVC controller for CRUD.
-- `Models/Starship.cs` ñ Entity definition (with JSON attribute for SWAPI mapping).
-- `Data/AppDbContext.cs` ñ EF Core DbContext.
-- `Data/DbInitializer.cs` ñ Resilient, paginated seeding from SWAPI with fallback.
-- `Views/Starships/` ñ Razor views (list/create/edit/details/delete).
-- `StarshipsApp.Tests/` ñ xUnit tests for controller behavior and edge cases.
+- `Controllers/StarshipsController.cs` ‚Äì MVC controller for CRUD.
+- `Models/Starship.cs` ‚Äì Entity definition (with JSON attribute for SWAPI mapping).
+- `Data/AppDbContext.cs` ‚Äì EF Core DbContext.
+- `Data/DbInitializer.cs` ‚Äì Resilient, paginated seeding from SWAPI with fallback.
+- `Views/Starships/` ‚Äì Razor views (list/create/edit/details/delete).
+- `StarshipsApp.Tests/` ‚Äì xUnit tests for controller behavior and edge cases.
 
 ## License
+
 
 This project is licensed under the MIT License.
