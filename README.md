@@ -46,7 +46,7 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 
 1. Clone the repository:
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/mattrick4/StarshipsApp
    cd StarshipsApp
    ```
 
@@ -159,3 +159,4 @@ Reseeding (optional)
 
 
 This project is licensed under the MIT License.
+
