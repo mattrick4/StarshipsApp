@@ -1,0 +1,50 @@
+﻿@model IEnumerable<StarshipsApp.Models.Starship>
+
+@{
+    ViewData["Title"] = "Starships";
+}
+
+@* Include DataTables for a better looking table. *@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<h2>Starships</h2>
+<a asp-action="Create">Create New Starship</a>
+<table id="starshipsTable" class="display">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Class</th>
+            <th>Crew</th>
+            <th>Passengers</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var starship in Model)
+    {
+        <tr>
+            <td>@starship.Name</td>
+            <td>@starship.Model</td>
+            <td>@starship.Manufacturer</td>
+            <td>@starship.StarshipClass</td>
+            <td>@starship.Crew</td>
+            <td>@starship.Passengers</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@starship.Id">Details</a>
+                <a asp-action="Edit" asp-route-id="@starship.Id">Edit</a>
+                <a asp-action="Delete" asp-route-id="@starship.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#starshipsTable').DataTable();
+    });
+</script>

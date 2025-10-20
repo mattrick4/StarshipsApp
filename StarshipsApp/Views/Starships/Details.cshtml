@@ -1,0 +1,41 @@
+﻿@model StarshipsApp.Models.Starship
+
+@{
+    ViewData["Title"] = "Starship Details";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Model</dt>
+        <dd class="col-sm-9">@Model.Model</dd>
+
+        <dt class="col-sm-3">Manufacturer</dt>
+        <dd class="col-sm-9">@Model.Manufacturer</dd>
+
+        <dt class="col-sm-3">Starship Class</dt>
+        <dd class="col-sm-9">@Model.StarshipClass</dd>
+
+        <dt class="col-sm-3">Crew</dt>
+        <dd class="col-sm-9">@Model.Crew</dd>
+
+        <dt class="col-sm-3">Passengers</dt>
+        <dd class="col-sm-9">@Model.Passengers</dd>
+
+        @if (!string.IsNullOrEmpty(Model.Url))
+        {
+            <dt class="col-sm-3">API URL</dt>
+            <dd class="col-sm-9">
+                <a href="@Model.Url" target="_blank">@Model.Url</a>
+            </dd>
+        }
+    </dl>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

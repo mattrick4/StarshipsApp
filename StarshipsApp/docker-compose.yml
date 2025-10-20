@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  starshipsapp:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    volumes:
+      - starshipsapp_data:/app/Data
+    restart: unless-stopped
+
+volumes:
+  starshipsapp_data:

@@ -1,0 +1,63 @@
+﻿@model StarshipsApp.Models.Starship
+
+@{
+    ViewData["Title"] = "Edit Starship";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Model" class="form-label"></label>
+            <input asp-for="Model" class="form-control" />
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Manufacturer" class="form-label"></label>
+            <input asp-for="Manufacturer" class="form-control" />
+            <span asp-validation-for="Manufacturer" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="StarshipClass" class="form-label"></label>
+            <input asp-for="StarshipClass" class="form-control" />
+            <span asp-validation-for="StarshipClass" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Crew" class="form-label"></label>
+            <input asp-for="Crew" class="form-control" />
+            <span asp-validation-for="Crew" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Passengers" class="form-label"></label>
+            <input asp-for="Passengers" class="form-control" />
+            <span asp-validation-for="Passengers" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Url" class="form-label"></label>
+            <input asp-for="Url" class="form-control" />
+            <span asp-validation-for="Url" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
+
+@await Html.PartialAsync("_ValidationScriptsPartial")

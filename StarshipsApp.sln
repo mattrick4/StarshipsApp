@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarshipsApp", "StarshipsApp\StarshipsApp.csproj", "{719A13A0-4E1C-4804-9D05-16BF4BFD92BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarshipsApp.Tests", "StarshipsApp.Tests\StarshipsApp.Tests.csproj", "{4D4FD6FA-D783-411D-B78A-E3D147735301}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{719A13A0-4E1C-4804-9D05-16BF4BFD92BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719A13A0-4E1C-4804-9D05-16BF4BFD92BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719A13A0-4E1C-4804-9D05-16BF4BFD92BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719A13A0-4E1C-4804-9D05-16BF4BFD92BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D4FD6FA-D783-411D-B78A-E3D147735301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4FD6FA-D783-411D-B78A-E3D147735301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4FD6FA-D783-411D-B78A-E3D147735301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4FD6FA-D783-411D-B78A-E3D147735301}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {887E98A6-2E59-416E-9EF1-6DAD20DB0F79}
+	EndGlobalSection
+EndGlobal
