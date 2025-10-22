@@ -4,7 +4,7 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 
 ## Features
 
-- Dynamic Table: View all starships in a responsive, sortable, and filterable table using DataTables.
+- Bootstrap table UI: Clean, responsive table using Bootstrap.
 - Full CRUD Support: Create, read, update, and delete starships via the UI.
 - Client-side Validation: Forms use jQuery Validation for instant feedback.
 - Bootstrap Styling: Modern, responsive UI for all pages.
@@ -13,6 +13,7 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 
 ## What’s new
 
+- UI: Bootstrap table for listing starships.
 - Robust seeding from SWAPI (https://swapi.dev):
   - Fetches all pages (pagination) with a 10s timeout and a User-Agent header.
   - Resilient: if SWAPI is unreachable or returns no data, seeding falls back to 3 embedded ships so the app is never empty.
@@ -29,7 +30,6 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 
 - ASP.NET Core MVC (.NET 8)
 - Entity Framework Core (SQLite)
-- DataTables.js
 - Bootstrap 5
 - jQuery & jQuery Validation
 - Docker & Docker Compose
@@ -157,5 +157,6 @@ Reseeding (optional)
 
 
 This project is licensed under the MIT License.
+
 
 
