@@ -4,47 +4,41 @@
     ViewData["Title"] = "Starships";
 }
 
-@* Include DataTables for a better looking table. *@
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Starships</h2>
+    <a asp-action="Create" class="btn btn-primary">Create New Starship</a>
+</div>
 
-<h2>Starships</h2>
-<a asp-action="Create">Create New Starship</a>
-<table id="starshipsTable" class="display">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Model</th>
-            <th>Manufacturer</th>
-            <th>Class</th>
-            <th>Crew</th>
-            <th>Passengers</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var starship in Model)
-    {
-        <tr>
-            <td>@starship.Name</td>
-            <td>@starship.Model</td>
-            <td>@starship.Manufacturer</td>
-            <td>@starship.StarshipClass</td>
-            <td>@starship.Crew</td>
-            <td>@starship.Passengers</td>
-            <td>
-                <a asp-action="Details" asp-route-id="@starship.Id">Details</a>
-                <a asp-action="Edit" asp-route-id="@starship.Id">Edit</a>
-                <a asp-action="Delete" asp-route-id="@starship.Id">Delete</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
-
-<script>
-    $(document).ready(function () {
-        $('#starshipsTable').DataTable();
-    });
-</script>
+<div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Model</th>
+                <th scope="col">Manufacturer</th>
+                <th scope="col">Class</th>
+                <th scope="col">Crew</th>
+                <th scope="col">Passengers</th>
+                <th scope="col" class="text-nowrap">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var starship in Model)
+        {
+            <tr>
+                <td>@starship.Name</td>
+                <td>@starship.Model</td>
+                <td>@starship.Manufacturer</td>
+                <td>@starship.StarshipClass</td>
+                <td>@starship.Crew</td>
+                <td>@starship.Passengers</td>
+                <td class="text-nowrap">
+                    <a asp-action="Details" asp-route-id="@starship.Id" class="btn btn-sm btn-outline-secondary">Details</a>
+                    <a asp-action="Edit" asp-route-id="@starship.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@starship.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

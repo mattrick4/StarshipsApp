@@ -1,17 +1,18 @@
 # StarshipsApp
 
-A web application built with ASP.NET Core (.NET 8) and MVC architecture for managing a collection of Starships. The app provides a responsive, sortable, and filterable table of starships, with full Create, Read, Update, and Delete (CRUD) support.
+A web application built with ASP.NET Core (.NET 8) and MVC architecture for managing a collection of Starships. The app provides a responsive, filterable UI with full Create, Read, Update, and Delete (CRUD) support.
 
 ## Features
 
-- Dynamic Table: View all starships in a responsive, sortable, and filterable table using DataTables.
+- Bootstrap table UI: Clean, responsive table using Bootstrap.
 - Full CRUD Support: Create, read, update, and delete starships via the UI.
 - Client-side Validation: Forms use jQuery Validation for instant feedback.
 - Bootstrap Styling: Modern, responsive UI for all pages.
 - Docker Support: Run the app in a containerized environment with SQLite persistence.
 
-## What’s new (since last update)
+## What’s new
 
+- UI: Bootstrap table for listing starships.
 - Robust seeding from SWAPI (https://swapi.dev):
   - Fetches all pages (pagination) with a 10s timeout and a User-Agent header.
   - Resilient: if SWAPI is unreachable or returns no data, seeding falls back to 3 embedded ships so the app is never empty.
@@ -28,7 +29,6 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
 
 - ASP.NET Core MVC (.NET 8)
 - Entity Framework Core (SQLite)
-- DataTables.js
 - Bootstrap 5
 - jQuery & jQuery Validation
 - Docker & Docker Compose
@@ -58,7 +58,7 @@ A web application built with ASP.NET Core (.NET 8) and MVC architecture for mana
    ```
 
 4. Run the application:
-- In Visual Studio press __F5__, or:
+- In Visual Studio press F5, or:
   ```sh
   dotnet run
   ```
@@ -132,9 +132,6 @@ Reseeding (optional)
 - Architecture
   - Optionally refactor to Razor Pages for a page-focused UI, keeping existing behavior.
   - Extract SWAPI calls behind an interface and use `IHttpClientFactory` with a named client.
-
-## What's Next
-
 - Implement AI features
 - Add Authentication
 
